@@ -1,3 +1,0 @@
-Foi criado uma classe para generalizar os hotéis, pois eles tem tipos de atributos
-que se repetem, com apenas coisas específicas variando, como o nome de cada hotel.
-
