@@ -1,8 +1,5 @@
 from src import class_hotel
 
-def somatorio(valor1, valor2, valor3):
-    return valor1 + valor2 + valor3
-
 # dados: [0]tipo_de_cliente, [1]data_inicial, [2]data_do_meio, [3]data_final
 def get_cheapest_hotel(number):   #DO NOT change the function's name
     number = number.replace(",", "").replace(":", "") # Remove dois pontos e vírgula
@@ -17,10 +14,12 @@ def get_cheapest_hotel(number):   #DO NOT change the function's name
         bridgewood.nome : 0,
         ridgewood.nome : 0
     }
+    
     # Faz a soma e guarda no dicionário
-    soma_precos[lakewood.nome] += somatorio(lakewood.calcular_preco(dados[0], dados[1]), lakewood.calcular_preco(dados[0], dados[2]), lakewood.calcular_preco(dados[0], dados[3]))
-    soma_precos[bridgewood.nome] += somatorio(bridgewood.calcular_preco(dados[0], dados[1]), bridgewood.calcular_preco(dados[0], dados[2]), bridgewood.calcular_preco(dados[0], dados[3]))
-    soma_precos[ridgewood.nome] += somatorio(ridgewood.calcular_preco(dados[0], dados[1]), ridgewood.calcular_preco(dados[0], dados[2]), ridgewood.calcular_preco(dados[0], dados[3]))
+    for i in range(3):
+        soma_precos[lakewood.nome] += lakewood.calcular_preco(dados[0], dados[i+1])
+        soma_precos[bridgewood.nome] += bridgewood.calcular_preco(dados[0], dados[i+1])
+        soma_precos[ridgewood.nome] += ridgewood.calcular_preco(dados[0], dados[i+1])
     
     # Dirá qual o hotel mais barato pelo valor total da estadia guardada no dicionário
     if((soma_precos[lakewood.nome] < soma_precos[bridgewood.nome]) and (soma_precos[lakewood.nome] < soma_precos[ridgewood.nome])):
