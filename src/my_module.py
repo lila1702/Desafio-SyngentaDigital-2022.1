@@ -10,21 +10,21 @@ def get_cheapest_hotel(number):   #DO NOT change the function's name
     ridgewood = class_hotel.Hotel("Ridgewood", 5, [220, 150], [100, 40])
     # Cria um dicionário que armazenará o preço total da estadia
     soma_precos = {
-        lakewood.nome : 0,
-        bridgewood.nome : 0,
-        ridgewood.nome : 0
+        lakewood : 0,
+        bridgewood : 0,
+        ridgewood : 0
     }
     
     # Faz a soma e guarda no dicionário
     for i in range(3):
-        soma_precos[lakewood.nome] += lakewood.calcular_preco(dados[0], dados[i+1])
-        soma_precos[bridgewood.nome] += bridgewood.calcular_preco(dados[0], dados[i+1])
-        soma_precos[ridgewood.nome] += ridgewood.calcular_preco(dados[0], dados[i+1])
+        soma_precos[lakewood] += lakewood.calcular_preco(dados[0], dados[i+1])
+        soma_precos[bridgewood] += bridgewood.calcular_preco(dados[0], dados[i+1])
+        soma_precos[ridgewood] += ridgewood.calcular_preco(dados[0], dados[i+1])
     
     # Dirá qual o hotel mais barato pelo valor total da estadia guardada no dicionário
-    if((soma_precos[lakewood.nome] < soma_precos[bridgewood.nome]) and (soma_precos[lakewood.nome] < soma_precos[ridgewood.nome])):
+    if((soma_precos[lakewood] < soma_precos[bridgewood]) and (soma_precos[lakewood] < soma_precos[ridgewood])):
         cheapest_hotel = lakewood.nome
-    elif((soma_precos[bridgewood.nome] < soma_precos[lakewood.nome]) and (soma_precos[bridgewood.nome] < soma_precos[ridgewood.nome])):
+    elif((soma_precos[bridgewood] < soma_precos[lakewood]) and (soma_precos[bridgewood] < soma_precos[ridgewood])):
         cheapest_hotel = bridgewood.nome
     # Se chegar no else, significa que ou Ridgewood é o mais barato, ou que todos tem valores iguais
     # Neste caso, Ridgewood tem a melhor classificação entre eles
