@@ -6,7 +6,7 @@ seu processo seletivo de Estágio de 2022.
 ## O desafio
 
 Ele consiste em fazer um programa que calcula o preço de três estadias em certos períodos
-em três hotéis distintos e vê qual o mais barato, de acordo com o tipo de cliente, Regular ou de Fidelidade (Reward).
+em três hotéis distintos e verifica qual o mais barato, de acordo com o tipo de cliente, Regular ou de Fidelidade (Reward).
 
 Os hotéis são e seus preços são:
 
