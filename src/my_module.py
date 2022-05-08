@@ -24,8 +24,10 @@ def get_cheapest_hotel(number):   #DO NOT change the function's name
     # Dirá qual o hotel mais barato pelo valor total da estadia guardada no dicionário
     if((soma_precos[lakewood.nome] < soma_precos[bridgewood.nome]) and (soma_precos[lakewood.nome] < soma_precos[ridgewood.nome])):
         cheapest_hotel = lakewood.nome
-    elif(soma_precos[bridgewood.nome] < soma_precos[ridgewood.nome]):
+    elif((soma_precos[bridgewood.nome] < soma_precos[lakewood.nome]) and (soma_precos[bridgewood.nome] < soma_precos[ridgewood.nome])):
         cheapest_hotel = bridgewood.nome
+    # Se chegar no else, significa que ou Ridgewood é o mais barato, ou que todos tem valores iguais
+    # Neste caso, Ridgewood tem a melhor classificação entre eles
     else:
         cheapest_hotel = ridgewood.nome
     
