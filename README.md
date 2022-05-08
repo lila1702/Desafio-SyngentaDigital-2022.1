@@ -54,7 +54,6 @@ $ py.test
 
 A versão atual do programa foi feita especificamente para lidar com apenas os três hotéis citados anteriormente.
 Assim sendo, para expandir este programan no futuro, de forma que ele possa analisar e comparar os preços de **n** hotéis
-em estadias de durações diversas, seria necessário uma significante reformulação no módulo responsável (My_Module.py).
+em estadias de durações diversas, seria necessário uma significante reformulação no módulo responsável [My_Module](src/my_module.py).
 
 Meus pensamentos sobre como eu faria essa expansão se encontram no arquivo [Futuras_Expansões](Futuras_Expansões.md) na raíz do repositório.
-
