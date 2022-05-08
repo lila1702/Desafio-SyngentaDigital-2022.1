@@ -11,6 +11,7 @@ em três hotéis distintos e vê qual o mais barato, de acordo com o tipo de cli
 Os hotéis são e seus preços são:
 
 - Em dias úteis
+
 | Tipo Cliente | Lakewood | Bridgewood | Ridgewood |
 |--------------|----------|------------|-----------|
 | Regular      |    110   |     160    |     220   |
@@ -18,6 +19,7 @@ Os hotéis são e seus preços são:
 
 
 - Em fins de semana
+
 | Tipo Cliente | Lakewood | Bridgewood | Ridgewood |
 |--------------|----------|------------|-----------|
 | Regular      |     90   |      60    |     150   |
@@ -55,4 +57,4 @@ Assim sendo, para expandir este programan no futuro, de forma que ele possa anal
 em estadias de durações diversas, seria necessário uma significante reformulação no módulo responsável (My_Module.py).
 
 Meus pensamentos sobre como eu faria essa expansão se encontram no arquivo Futuras_Expansões.md na raíz do repositório.
---------------
+
