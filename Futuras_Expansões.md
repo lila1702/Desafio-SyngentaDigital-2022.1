@@ -29,7 +29,7 @@ comparando cada preço, de acordo com o tipo de cliente e com o dia da semana.
 ```
 tipo_cliente = ("Regular" ou "Reward")
 datas = [data1, data2, ..., dataN)
-cheapest_hotel = ["nome", 0, 100000000] # Nome, classificação e preço provisórios para inicializar a variável de comparação
+cheapest_hotel = ["nome", 0, 100000000] # Nome, classificação e preço provisórios
 
 for linha in range(len(hoteis)):
   # Pula a linha que indica o que é o que na tabela
@@ -76,3 +76,37 @@ calcular_preco_estadia(datas, preco_dia_util, preco_fim_de_semana):
   
   return total
 ```
+
+Por fim, seria necessário algo para servir de interface que interage com o usuário.
+Seria necessário um main.py com um loop, que recebe as datas de chegada e saída ao hotel, e opções de quebra do loop, caso o usuário deseje sair do programa.
+
+Se fossemos continuar com o programa apenas com linhas de comando, ficaria algo como:
+```
+import datetime
+
+while(True):
+  print("Digite a data de chegada ao hotel:")
+  data_chegada = input("dd/mm/aaaa: ")
+  print("Digite a data de sáido do hotel:")
+  data_saida = input("dd/mm/aaaa: ")
+    
+  try:
+    if("/" in data_chegada or "/" in data_saida):
+      data_chegada = data_chegada.replace("/", "")
+      data_saida = data_saida.replace("/", "")
+        
+      data_chegada = datetime.datetime.strptime(data_chegada, "%d%m%Y")
+      data_saida = datetime.datetime.strptime(data_saida, "%d%m%Y")
+  except:
+    print("Digite as datas novamente, no formato dd/mm/aaaa")
+    continue
+    
+    print("Deseja continuar?")
+    continuar = input("(S/N): ")
+    continuar = continuar.upper()
+    
+    if(continuar == "N"):
+  	  break
+```
+
+Caso fosse utilizar alguma interface gráfica, haveria adaptações, mas o princípio seguiria o mesmo.
