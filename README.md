@@ -50,7 +50,24 @@ $ pip3 install -r requirements.txt
 $ py.test
 ```
 
-## Observações
+## Por que utilizei Classes?
+
+Transformar os hotéis em objetos de classe tipo Hotel serve para que haja uma forma fácil de me referir a qualquer dado
+sobre aquele hotel específico, além de organizar o código em Informações Sobre os Hotéis x Comparar Preços.
+
+Também poderia ter sido utilizado listas, tuplas ou dicionários (até porque já estaria usando dicionário em [My_Module](src/my_module.py)).
+No entanto, listas e tuplas fazem uso de índices númericos, algo que seria ruim por facilitar erros na hora de me referir a algum deles (Ex: "Qual era o índice que tinha o preço de fidelidade do fim de semana mesmo?").
+
+Listas e tuplas funcionam melhor quando são poucos índices, ou quando são utilizados em laços, onde a passagem por índices é automática (Como também é visto no [My_Module](src/my_module.py) quando o input do usuário (nesse caso, o PyTest) é recebido pela função e convertida numa lista chamada **dados**).
+
+Dicionários funcionariam melhor, mas ainda assim, como são vários atributos para cada hotel, acabaria necessitando de uma lista/tupla
+para guardá-los, onde o problema anterior retornaria. No entanto, ele funciona bem em sua forma mais simples, para guardar
+um único valor relacionado a uma *key*, neste caso, para guardar o valor total da estadia em determinado hotel.
+
+Assim sendo, tudo que é relacionado a alguma informação sobre o hotel, como nomes, preços ou classificações foi facilmente registrada pela
+classe, e facilmente acessível pelo seu objeto.
+
+## Mas e se quisessemos expandir o programa?
 
 A versão atual do programa foi feita especificamente para lidar com apenas os três hotéis citados anteriormente.
 Assim sendo, para expandir este programan no futuro, de forma que ele possa analisar e comparar os preços de **n** hotéis
